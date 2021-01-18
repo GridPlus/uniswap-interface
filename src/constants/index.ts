@@ -1,7 +1,7 @@
 import { ChainId, JSBI, Percent, Token, WETH } from '@uniswap/sdk'
 import { AbstractConnector } from '@web3-react/abstract-connector'
 
-import { fortmatic, injected, portis, walletconnect, walletlink } from '../connectors'
+import { fortmatic, injected, portis, walletconnect, walletlink, lattice } from '../connectors'
 
 export const ROUTER_ADDRESS = '0x7a250d5630B4cF539739dF2C5dAcb4c659F2488D'
 
@@ -171,7 +171,16 @@ export const SUPPORTED_WALLETS: { [key: string]: WalletInfo } = {
     href: null,
     color: '#4A6C9B',
     mobile: true
-  }
+  },
+  LATTICE: {
+    connector: lattice,
+    name: 'Lattice',
+    iconName: 'gridPlusWallet.png',
+    description: 'Connect to GridPlus Wallet.',
+    href: null,
+    color: '#40a9ff',
+    mobile: true
+  },
 }
 
 export const NetworkContextName = 'NETWORK'
